@@ -1,5 +1,7 @@
 package TestCases;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -11,12 +13,15 @@ import com.jmoney.luckeylink.service.WebXmlParseService;
 public class SearchProcess {
 	
 	private static RunUnitService runService;
+	private static WebDriver driver;
 	
 	@BeforeTest
-	private void stup() throws Exception{
-		TestUnit testunit = WebXmlParseService.parse("谷歌浏览器","SearchProcess.xml");
+	private void before() {
+		TestUnit testunit = WebXmlParseService.parse("谷歌浏览器", "SearchProcess.xml");
 		runService = new RunUnitService(testunit);
-		System.out.println("----------------------------------------【百度-搜索自动化测试系统流程】---------------------------------------");
+
+
+
 	}
 	
 //	@Test
@@ -27,6 +32,7 @@ public class SearchProcess {
 	@Test
 	public void case1() throws Exception{
 		runService.runCase("case1");
+
 	}
 	
 	@Test

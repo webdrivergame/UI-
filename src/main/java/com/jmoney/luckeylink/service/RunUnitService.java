@@ -82,7 +82,8 @@ public class RunUnitService {
     		if(clazz != null){
     			String key = step.getAction().key();
     			Method m = clazz.getDeclaredMethod(getMethodName(key), new Class<?>[]{TestStep.class});
-    			m.invoke(clazz.newInstance(), step);
+    			 m.invoke(clazz.newInstance(), step);
+
     		}else{
     			action.run(step);
     		}

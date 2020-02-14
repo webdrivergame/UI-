@@ -33,7 +33,7 @@ public class ClickActionHandler {
 	public void webClick(TestStep step) throws Exception{ 
 		try {
 			 System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
-			 step.getWebDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+			 //step.getWebDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
 			 SeleniumUtil.getElement(step).click();
 			 Thread.sleep(600);	 
 		} catch (InterruptedException e1) {

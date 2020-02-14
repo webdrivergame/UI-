@@ -19,7 +19,6 @@ public class WaitActionHandler {
 	
 	/**
 	 * 强制等待
-	 * @param map
 	 * @param step
 	 */
 	public void waitForced(TestStep step){
@@ -34,7 +33,6 @@ public class WaitActionHandler {
 	
 	/**
 	 * Web端隐式等待
-	 * @param map
 	 * @param step
 	 */
 	public void webImplicit(TestStep step){
@@ -45,7 +43,7 @@ public class WaitActionHandler {
 
 	/**
 	 * Android端隐式等待
-	 * @param map
+	 * @param
 	 * @param step
 	 */
 	public void androidImplicit(TestStep step){

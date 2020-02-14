@@ -18,7 +18,7 @@ public class InputActionHandler {
 	 */
 	public void webInput(TestStep step) throws Exception{ 
 		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
-		step.getWebDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+		//step.getWebDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
 		WebElement e = SeleniumUtil.getElement(step);
 		e.clear();
 		e.sendKeys(SeleniumUtil.parseStringHasEls(step.getValue()));	

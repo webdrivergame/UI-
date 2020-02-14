@@ -19,8 +19,7 @@ public class RecordActionHandler {
 	
 	/**
 	 * <br>开始录制视频</br>
-	 * 
-	 * @param RecordCaseName
+	 *
 	 */
 	public void startRecord(TestStep step) throws Exception {
 	    Runtime rt = Runtime.getRuntime();
@@ -53,8 +52,7 @@ public class RecordActionHandler {
 	
 	/**
 	 * <br>上传录制的视频</br>
-	 * 
-	 * @param RecordCaseName
+	 *
 	 */
 	public void pullRecord(TestStep step) throws Exception {
 	    Runtime rt = Runtime.getRuntime();
@@ -72,8 +70,7 @@ public class RecordActionHandler {
 		
 	/**
 	 * <br>移动录制的视频</br>
-	 * 
-	 * @param RecordCaseName
+	 *
 	 */
 	public void moveRecord(TestStep step) throws Exception {
 	    Runtime rt = Runtime.getRuntime();

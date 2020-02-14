@@ -13,7 +13,7 @@ import com.jmoney.luckeylink.base.TestStep;
 /**
  * <br>公用函数功能</br>
  *
- * @author  刘智
+ * @author
  * @date    2017年7月27日 下午4:07:18
  * @version 1.0
  * @since   1.0
@@ -30,8 +30,8 @@ public class SeleniumUtil {
 	 * 如果属性可以唯一确定要获取的元素，则可以省略[索引]，例子如下：<br/>
 	 * class=android.widget.TextView[1]
 	 *
-	 * @author    刘智
-	 * @date      2017年7月26日 下午3:55:57
+	 * @author
+	 * @date
 	 * @param step
 	 * @return
 	 * @throws Exception 
@@ -45,6 +45,7 @@ public class SeleniumUtil {
 			   int idx1 = loc.indexOf("=") ;
 			   String locatename = loc.substring(0, idx1);
 			   String locatevalue = loc.substring(idx1+1);
+
 //			   System.out.println(locatename+"  "+locatevalue);
 
 			   switch(locatename){
@@ -86,7 +87,7 @@ public class SeleniumUtil {
 	 * 当前假设包含多个EL表达式的字符串中，</br>
 	 * 每一个EL表达式对应的是localmap中的值为String类型的键值对
 	 *
-	 * @author    刘智
+	 * @author
 	 * @date      2017年8月2日 上午11:43:43
 	 * @param str
 	 * @return
@@ -105,7 +106,7 @@ public class SeleniumUtil {
 			Object val =parseEL(substr);
 			
 			if(val instanceof List)
-				throw new Exception("类型错误，字符串中的取值表达式的获取结果是一个 List 类型！");
+				throw new Exception("类型错误，字符串中的取值表达式的获取结果是一个 List 类型！");	
 		
 			res = res.replace(substr, val.toString());
 		}while(end < str.length());
@@ -124,7 +125,7 @@ public class SeleniumUtil {
 	 *<h1>List&lt;String></h1>
 	 *<h1>List&lt;Map&lt;String,Object>></h1></br>
 	 *
-	 * @author    刘智
+	 * @author
 	 * @date      2017年8月2日 下午2:43:54
 	 * @param str
 	 * @return

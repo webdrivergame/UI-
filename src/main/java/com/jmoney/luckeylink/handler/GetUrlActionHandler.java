@@ -14,8 +14,9 @@ public class GetUrlActionHandler {
 	 */
 	public void webGeturl(TestStep step) throws Exception {
 		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
-		step.getWebDriver().get(step.getValue());	
-		step.getWebDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
+		step.getWebDriver().get(step.getValue());
+		System.out.println("输入Url地址ok");
+		//step.getWebDriver().manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
 	}
 	
 	/**

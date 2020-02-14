@@ -3,11 +3,7 @@ package com.jmoney.luckeylink.service;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -72,15 +68,14 @@ public class WebXmlParseService {
 	 * @throws Exception
 	 */
 	public static void ChromeDriver(){
-		System.setProperty("webdriver.chrome.driver", ConfigUtil.getProperty("webdriver.chrome.driver", Constants.CONFIG_COMMON)); 
+		System.setProperty("webdriver.chrome.driver",ConfigUtil.getProperty("webdriver.chrome.driver", Constants.CONFIG_COMMON));
 		driver = new ChromeDriver();
-//		driver .manage().window().maximize();//全屏
+		driver .manage().window().maximize();//全屏
 	}
 
 	/**
 	 * <br>根据用例的名称，截取图片，进行保存</br>
 	 *
-	 * @param ScreenshotName
 	 */
 	@SuppressWarnings("unused")
 	public static void screenShot(String CaseID) {
